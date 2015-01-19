@@ -24,16 +24,16 @@ To install Later,copy the files to the root web directory on the server. The fil
 
 The settings in the config file are:
 
- - MYSQL_SERVER - if unknown, try
- - MYSQL_USERNAME
- - MYSQL_PASSWORD
- - MYSQL_DB
- - TIMEZONE - The timezone to use (according to [PHP's Supported Timezones](http://www.php.net/manual/en/timezones. php))
- - RESULTS_PER_PAGE - The number of messages to show per page
- - API_KEY - a randomly generated string used in the login flow (see Login API)
- - FROM_NAME - The name to show when an email is received
- - FROM_EMAIL - The email address to send messages from
- - LOGIN_URL - The URL to the beginning of the login flow (see Login API)
+ - `MYSQL_SERVER` - if unknown, try
+ - `MYSQL_USERNAME`
+ - `MYSQL_PASSWORD`
+ - `MYSQL_DB`
+ - `TIMEZONE` - The timezone to use (according to [PHP's Supported Timezones](http://www.php.net/manual/en/timezones. php))
+ - `RESULTS_PER_PAGE` - The number of messages to show per page
+ - `API_KEY` - a randomly generated string used in the login flow (see Login API)
+ - `FROM_NAME` - The name to show when an email is received
+ - `FROM_EMAIL` - The email address to send messages from
+ - `LOGIN_URL` - The URL to the beginning of the login flow (see Login API)
 
 Once this file has been setup, run `admin/install.php` in a command line tool (logging onto the server using SSH). This can be run by navigating to the folder admin, then typing the line:
 
