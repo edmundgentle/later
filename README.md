@@ -59,7 +59,7 @@ For example: `bob@example.com|14.09.13`
 
 This string is then hashed using a [HMAC SHA256 hash algorithm](http://en.wikipedia.org/wiki/Hash-based_ message_authentication_code) using the API key (which you defined in the `includes/config.php` file).
 
-In PHP, this may look like what you can see on the left hand side of this page.
+In PHP, this may look like the code block below.
 
 Once the POST request is made, if successful, the JSON response string will contain an element called key. This can simply be appended to the end of any URL as a GET parameter named key.
 
