@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteOptions Inherit
+
+RewriteRule ^post/?$ post_message.php?%{QUERY_STRING}
+RewriteRule ^user/([0-9]+)/?$ profile.php?id=$1&%{QUERY_STRING}
+RewriteRule ^groups/?$ my_groups.php?%{QUERY_STRING}
+RewriteRule ^groups/create/?$ add_group.php?%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/?$ group.php?id=$1&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/remove/?$ leave_group.php?id=$1&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/add/?$ group_add.php?id=$1&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/add/manager/?$ group_add.php?id=$1&manager=true&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/remove/([0-9]+)/?$ leave_group.php?id=$1&user=$2&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/remove/manager/([0-9]+)/?$ leave_group.php?id=$1&user=$2&manager=true&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/edit/?$ group_edit.php?id=$1&%{QUERY_STRING}
+RewriteRule ^groups/([0-9]+)/delete/?$ group_remove.php?id=$1&%{QUERY_STRING}
+RewriteRule ^settings/?$ subscriptions.php?%{QUERY_STRING}
+RewriteRule ^([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/edit/?$ edit_message.php?slug=$2&%{QUERY_STRING}
+RewriteRule ^([A-Za-z0-9-_]+)/([A-Za-z0-9-_]+)/?$ view.php?slug=$2&category=$1&%{QUERY_STRING}
+RewriteRule ^([A-Za-z0-9-_]+)/?$ cat.php?slug=$1&%{QUERY_STRING}

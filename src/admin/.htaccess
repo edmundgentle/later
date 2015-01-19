@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteOptions Inherit
+
+#static pages
+RewriteRule ^categories/?$ cats.php?%{QUERY_STRING}
+RewriteRule ^categories/add/?$ add_category.php?%{QUERY_STRING}
+RewriteRule ^messages/?$ mess.php?%{QUERY_STRING}
